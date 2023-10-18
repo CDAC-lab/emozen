@@ -1,0 +1,21 @@
+[flake8]
+max-line-length = 120
+# E203 - Whitespace before ':' - whitespace around : is nice for making complex indexing readable, black also does this
+# E741 - Do not use variables named 'I', 'O', or 'l'
+# F401 - Module imported but unused
+# W503 - Line break occurred before a binary operator - black formats so the operator is first on a multiline expression
+ignore = E741,W503,E203,F401
+exclude =
+    .git
+    __pycache__
+    setup.py
+    build
+    dist
+    tests/*
+    releases
+    .venv
+    .tox
+    .mypy_cache
+    .pytest_cache
+    .vscode
+    .github
